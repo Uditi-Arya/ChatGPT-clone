@@ -1,0 +1,102 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --text-color:#FFFFFF;
+    --icon-color: #ACACBE;
+    --icon-hover-bg: #5b5e71;
+    --placeholder-color: #cccccc;
+    --outgoing-chat-bg: #343541;
+    --incoming-chat-bg: #444654;
+    --outgoing-chat-border: #343541;
+    --incoming-chat-border: #444654;
+}
+
+body {
+    background-color:var(--outgoing-chat-bg); 
+}
+.chat .chat-content{
+    display: flex;
+    max-width:1200px;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+
+}
+.chat .chat-content span{
+    font-size:1.3rem;
+    color: var(--icon-color);
+    visibility: hidden;
+
+}
+.chat:hover .chat-content span{
+    visibility: visible;
+}
+
+.chat-container .chat{
+    color: var(--text-color);
+    padding: 25px 10px;
+    display: flex;
+    justify-content: center;
+
+
+}
+.chat-container .chat.outgoing
+{
+    background:var(--outgoing-chat-bg);
+    border:1px solid var(--outgoing-chat-border);
+
+}
+.chat-container .chat.incoming
+{
+    background:var(--incoming-chat-bg);
+    border:1px solid var(--incoming-chat-border);
+    
+}
+.chat .chat-details{
+    display: flex;
+    align-items: center;
+
+}
+.chat .chat-details img{
+    width: 35px;
+    height:35px;
+  
+    border-radius: 2px;
+    margin-right: 10px;
+
+
+}
+span.material-symbols-rounded {
+    font-size: 24px; /* Adjust the size of the emoji */
+    cursor: pointer; /* Make the emoji interactive */ 
+}
+.chat .chat-details p{
+    white-space: pre-wrap;
+    font-size: 1.05 rem;
+    padding: 0 50px 0 25px;
+}
+img {
+    width: 9%;
+    max-width: 50px; /* Set a cap */
+    height: auto; /* Maintain aspect ratio */
+}
+.typing-animation
+{
+    display: inline-flex;
+    padding-left: 25px;
+
+}
+.typing-animation .typing-dot
+{
+   height: 7px;
+   width: 7px;
+   opacity: 0.7;
+   border-radius: 50%;
+   margin: 0 3px;
+   background: var(--text-color);
+}
