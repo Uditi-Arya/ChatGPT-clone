@@ -99,4 +99,23 @@ img {
    border-radius: 50%;
    margin: 0 3px;
    background: var(--text-color);
+   animation: animateDots 1.0s var(--delay) ease-in-out infinite;
+   
+}
+@keyframes animateDots
+{
+   0%, 44%
+   {
+    transform : translateY(0px);
+   }
+   22%
+   {
+    opacity: 0.4;
+    transform: translateY(-6px);
+   }
+   44%
+   {
+    opacity: 0.2;
+    transform : translateY(0px);
+   }
 }
